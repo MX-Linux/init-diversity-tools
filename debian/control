@@ -1,0 +1,40 @@
+Source: init-diversity-tools
+Section: init-diversity
+Priority: optional
+Maintainer: ProwlerGr <Prowler73@gmail.com>
+Build-Depends:
+ debhelper-compat (= 13)
+Standards-Version: 3.9.8
+
+Package: init-diversity-tools
+Section: init-diversity
+Priority: optional
+Architecture: all
+Depends:
+ busybox | busybox-static,
+Recommends:
+ sysvinit-init-diversity,
+ s6-rc-init-diversity,
+ s6-66-init-diversity,
+ openrc-init-diversity,
+ dinit-init-diversity,
+ runit-init-diversity,
+ systemd-init-diversity,
+Replaces:
+ sysv-rc,
+ openrc,
+ sysvinit-core,
+ runit-init,
+ openrc-init,
+ s6-rc-init,
+ s6-66-init,
+ dinit-init,
+ systemd-sysv,
+ systemd,
+ runit-init-antix,
+ dinit-init-antix,
+Suggests:
+ grub-init-diversity,
+Description: A collection of software that can configure antiX or any Debian based system to use multiple inits.
+ This package contains wrapper scripts to detect init systems and control the rc/rcS/reboot/shutdown/poweroff 
+ functions under various inits.

@@ -1,0 +1,12 @@
+./init-diversity-tools/poweroff.sh
+./init-diversity-tools/rc.sh
+./init-diversity-tools/rcS.sh
+./init-diversity-tools/reboot.sh
+./init-diversity-tools/runlevel.sh
+./init-diversity-tools/shutdown.sh
+./init-diversity-tools/poweroff.sh
+./init-diversity-tools/rc.sh
+./init-diversity-tools/rcS.sh
+./init-diversity-tools/reboot.sh
+./init-diversity-tools/runlevel.sh
+./init-diversity-tools/shutdown.sh

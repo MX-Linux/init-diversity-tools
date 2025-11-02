@@ -1,0 +1,85 @@
+init-diversity-tools (0.0.5.0~mx25) mx; urgency=medium
+  
+  [ ProwlerGr ]
+  * Removed echo functions on succesful init detection from runlevel.sh polluting inxi outputs.
+  * Removed sudo/su prompt from runlevel.sh to allow inxi/QSI in rootless mode.
+  * Placed sysvinit detection last - $(ps -p1) may give false positives in live/frugal mode.
+  [ dolphin oracle ]
+  * adjustments for mx linux
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 02 Nov 2025 14:53:49 -0500
+
+init-diversity-tools (0.0.5.0experimental1) UNRELEASED; urgency=medium
+  
+  * Added openvt workaround for live/frugal s6-rc reboot/poweroff
+
+ -- ProwlerGr <Prowler73@gmail.com>  Thu, 30 Oct 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.4.0experimental1) UNRELEASED; urgency=medium
+  
+  * Added wrapper & diversion for /usr/sbin/runlevel for inits that use it
+
+ -- ProwlerGr <Prowler73@gmail.com>  Mon, 27 Oct 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.3.0experimental1) UNRELEASED; urgency=medium
+
+  * Protecting functions with dpkg-diversions in maintainer scripts
+  * Enhanced/corrected init detection methods depending on live or cmdline boot
+  * Added echo functions to cli to help detect failures
+  * Installing to /usr/lib to avoid aliased-location lintian errors
+  * Corrected systemctl functions for systemd (for potential MX use) 
+
+ -- ProwlerGr <Prowler73@gmail.com>  Wed, 15 Oct 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.2.0experimental1) UNRELEASED; urgency=medium
+
+  * Fixes to s6-rc & s6-66 options
+
+ -- ProwlerGr <Prowler73@gmail.com>  Wed, 14 May 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.1.1experimental1) UNRELEASED; urgency=medium
+
+  * Added busybox for poweroff & reboot operations for integration to antiX live
+  * Reverted changes to shutdown script which now should be a pure wrapper
+
+ -- ProwlerGr <Prowler73@gmail.com>  Tue, 13 May 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.1.0experimental1) UNRELEASED; urgency=medium
+
+  * Added sync on all reboot/shutdown/poweroff commands for safer operation
+
+ -- ProwlerGr <Prowler73@gmail.com>  Mon, 12 May 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.0.2experimental1) UNRELEASED; urgency=medium
+
+  * dinit support added
+  * Modified scripts to also string the /sbin path on all occasions.
+  * Included rc & rcS scripts to support both OpenRC & Sysvinit 
+
+ -- ProwlerGr <Prowler73@gmail.com>  Sat, 03 May 2025 22:22:22 +1000
+
+init-diversity-tools (0.0.0.1experimental4) UNRELEASED; urgency=medium
+
+  * systemd support added
+
+ -- ProwlerGr <Prowler73@gmail.com>  Sat, 22 Jun 2024 22:22:22 +1000
+
+init-diversity-tools (0.0.0.1experimental3) UNRELEASED; urgency=medium
+
+  * OpenRC support added
+
+ -- ProwlerGr <Prowler73@gmail.com>  Sat, 16 Mar 2024 22:22:22 +1000
+
+init-diversity-tools (0.0.0.1experimental2) UNRELEASED; urgency=medium
+
+  * Shutdown script also added
+  * Scripts re-written to get init details before running relevant commands with option to pass parameters (instead of just stringing)
+
+ -- ProwlerGr <Prowler73@gmail.com>  Sat, 09 Mar 2024 22:22:22 +1000
+
+init-diversity-tools (0.0.0.1experimental1) UNRELEASED; urgency=medium
+
+  * Included new reboot & poweroff scripts to work on sysvinit/runit/s6-rc/s6-66
+  * Initial release to enable various enhancements on a multi init system
+
+ -- ProwlerGr <Prowler73@gmail.com>  Thu, 08 Feb 2024 22:22:22 +1000

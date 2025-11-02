@@ -1,0 +1,14 @@
+188e963bdb32d1ba7933d09ba0156aee  usr/lib/init-diversity/poweroff.sh
+b5bc4c5c4b4070b8b68a1a9edf1e63cd  usr/lib/init-diversity/rc.sh
+e8653a3679a79ff0bbd291ccf6c40b0d  usr/lib/init-diversity/rcS.sh
+0e334b8604ff1c7d8c5e506fecba48ab  usr/lib/init-diversity/reboot.sh
+c6ce0d5a85e00f640cdedb586602b0eb  usr/lib/init-diversity/runlevel.sh
+371dae9d04d5a5f52d42d44a2a6890cc  usr/lib/init-diversity/shutdown.sh
+f19c55a6bbd94fc079476d5de9015f8e  usr/share/doc/init-diversity-tools/changelog.gz
+8b92f1a9bc3cfba785bbd0a84605146a  usr/share/doc/init-diversity-tools/copyright
+188e963bdb32d1ba7933d09ba0156aee  usr/share/init-diversity-tools/poweroff.sh
+b5bc4c5c4b4070b8b68a1a9edf1e63cd  usr/share/init-diversity-tools/rc.sh
+e8653a3679a79ff0bbd291ccf6c40b0d  usr/share/init-diversity-tools/rcS.sh
+0e334b8604ff1c7d8c5e506fecba48ab  usr/share/init-diversity-tools/reboot.sh
+c6ce0d5a85e00f640cdedb586602b0eb  usr/share/init-diversity-tools/runlevel.sh
+371dae9d04d5a5f52d42d44a2a6890cc  usr/share/init-diversity-tools/shutdown.sh

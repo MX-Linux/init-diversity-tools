@@ -1,0 +1,6 @@
+/usr/lib/init-diversity/rc.sh 		/etc/init.d/rc
+/usr/lib/init-diversity/rcS.sh 		/etc/init.d/rcS
+/usr/lib/init-diversity/shutdown.sh 	/usr/sbin/shutdown
+/usr/lib/init-diversity/reboot.sh 	/usr/sbin/reboot
+/usr/lib/init-diversity/poweroff.sh 	/usr/sbin/poweroff
+/usr/lib/init-diversity/runlevel.sh 	/usr/sbin/runlevel
