@@ -50,7 +50,7 @@ export PATH
 
 # Un-comment the following for interactive debugging. Do not un-comment
 # this for debugging a real boot process as no scripts will be executed.
-# debug=echo
+# debug=#echo
 
 # Make sure the name survive changing the argument list
 scriptname="$0"
@@ -58,7 +58,7 @@ scriptname="$0"
 umask 022
 
 on_exit() {
-	echo "error: '$scriptname' exited outside the expected code flow."
+	#echo "error: '$scriptname' exited outside the expected code flow."
 }
 trap on_exit EXIT # Enable emergency handler
 
@@ -77,7 +77,7 @@ runlevel=$RUNLEVEL
 [ "$1" != "" ] && runlevel=$1
 if [ "$runlevel" = "" ]
 then
-	echo "Usage: $scriptname <runlevel>" >&2
+	#echo "Usage: $scriptname <runlevel>" >&2
 	exit 1
 fi
 previous=$PREVLEVEL
