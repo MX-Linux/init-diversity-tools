@@ -19,7 +19,7 @@ is the recommended method to build this package directly from git.
 
 
 ```
-sudo apt install git-buildpackage
+sudo apt install git-buildpackage debhelper build-essential lintian
 ```
 
 should get you all the software required to build using this method.
