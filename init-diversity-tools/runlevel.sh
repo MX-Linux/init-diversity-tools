@@ -19,7 +19,7 @@ if mountpoint -q /live/aufs; then
 					/usr/lib/sysvinit/runlevel $@;
 					exit 0
 				else 
-					echo "Strange... Cannot detect Live/Frugal init...  Will try to execute runlevel using bysybox... executing runlevel command..."
+					#echo "Strange... Cannot detect Live/Frugal init...  Will try to execute runlevel using bysybox... executing runlevel command..."
 					sync && sleep 5 && /usr/bin/busybox runlevel -f;
 					exit 1
 				fi
@@ -38,7 +38,7 @@ if mountpoint -q /live/aufs; then
 					/usr/lib/sysvinit/runlevel $@;
 					exit 0
 				else 
-					echo "Strange... Cannot detect Live/Frugal init...  Will try to execute runlevel using bysybox... executing runlevel command..."
+					#echo "Strange... Cannot detect Live/Frugal init...  Will try to execute runlevel using bysybox... executing runlevel command..."
 					sync && sleep 5 && /usr/bin/busybox runlevel -f;
 					exit 1
 				fi	
@@ -60,7 +60,7 @@ else
 					/usr/lib/sysvinit/runlevel $@;
 					exit 0
 				else 
-					echo "Strange... Cannot detect primary init...  Will try to execute runlevel using bysybox... executing runlevel command..."
+					#echo "Strange... Cannot detect primary init...  Will try to execute runlevel using bysybox... executing runlevel command..."
 					sync && sleep 5 && /usr/bin/busybox runlevel -f;
 					exit 1
 				fi
@@ -79,7 +79,7 @@ else
 					/usr/lib/sysvinit/runlevel $@;
 					exit 0
 				else 
-					echo "Strange... Cannot detect cmdline init...  Will try to execute runlevel using bysybox... executing runlevel command..."
+					#echo "Strange... Cannot detect cmdline init...  Will try to execute runlevel using bysybox... executing runlevel command..."
 					sync && sleep 5 && /usr/bin/busybox runlevel -f;
 					exit 1
 				fi	
