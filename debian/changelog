@@ -1,8 +1,12 @@
-init-diversity-tools (0.0.6.0experimental2) UNRELEASED; urgency=medium
+init-diversity-tools (0.0.6.0experimental2~mx25) mx; urgency=medium
   
+  [ ProwlerGr ]
   * Removed piping reboot & poweroff commands from /usr/sbin when cmdline init detected.
 
- -- ProwlerGr <Prowler73@gmail.com>  Mon, 10 Nov 2025 22:22:22 +1000
+  [ Dolphin Oracle ]
+  * mx versiong
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 30 Nov 2025 16:30:30 -0500
 
 init-diversity-tools (0.0.6.0experimental1) UNRELEASED; urgency=medium
   
