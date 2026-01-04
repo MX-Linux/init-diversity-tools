@@ -1,3 +1,9 @@
+init-diversity-tools (0.0.6.0~mx25) mx; urgency=medium
+
+  * adjust versioning
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 03 Jan 2026 19:04:18 -0500
+
 init-diversity-tools (0.0.6.0experimental2~mx25) mx; urgency=medium
   
   [ ProwlerGr ]
