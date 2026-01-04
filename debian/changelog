@@ -1,3 +1,10 @@
+init-diversity-tools (0.0.6.0~mx25u1) mx; urgency=medium
+
+  * set up for mx style dual-init 
+  * simplied to use same commands installed or live
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 04 Jan 2026 14:18:09 -0500
+
 init-diversity-tools (0.0.6.0~mx25) mx; urgency=medium
 
   * adjust versioning

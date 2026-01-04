@@ -1,32 +1,9 @@
-#! /bin/bash
-#
+#!/bin/bash
 
-#### Check to see if OpenRC is PID 1 - otherwise just use sysvinit #### 
-#
+[ -z "$BASH_VERSION" ] || [ "$UID" -ne 0 ] && exec sudo /bin/bash "$0" "$@"
 
-if [ $(ps -p1 | grep -ic openrc) -eq 1 ] || [ $(cat /proc/cmdline | grep -ic "openrc") -eq 1 ] || ( [ $(cat /proc/cmdline | grep -ic "init=/") -eq 0 ] && [ $(readlink -e /sbin/init | grep -ic "openrc") -eq 1 ] ); then
-
-#######################################################################
-#-----Contents of OpenRC's original rcS script below-----
-
-#!/bin/sh 
-# Wrapper of OpenRC called from inittab 
-
-set -e 
-
-exec /usr/sbin/openrc sysinit
-
-else
-#######################################################################
-#-----Contents of syvinit's original rcS script below-----
-
-#! /bin/sh
-#
-# rcS
-#
-# Call all S??* scripts in /etc/rcS.d/ in numerical/alphabetical order
-#
-
-exec /etc/init.d/rc S
-
-fi
+case "$(realpath /proc/1/exe 2>/dev/null || readlink -f /proc/1/exe)" in
+    /usr/lib/sysvinit/init)
+        [ -x /usr/lib/init/rc ] && exec /usr/lib/init/rc S
+        ;;
+esac
