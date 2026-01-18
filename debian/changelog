@@ -1,3 +1,9 @@
+init-diversity-tools (0.0.6.0~mx25u2) mx; urgency=medium
+
+  * remove busybox fallbacks from reboot and poweroff
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 18 Jan 2026 09:19:00 -0500
+
 init-diversity-tools (0.0.6.0~mx25u1) mx; urgency=medium
 
   * set up for mx style dual-init 
