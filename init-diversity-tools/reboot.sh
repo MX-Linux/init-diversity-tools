@@ -7,7 +7,7 @@ case "$(realpath /proc/1/exe 2>/dev/null || readlink -f /proc/1/exe)" in
         /usr/bin/systemctl reboot $@
         ;;
     /usr/lib/sysvinit/init)
-        /usr/lib/sysvinit/init 6
+        /usr/lib/sysvinit/reboot $@
         ;;
         *)
         sync && sleep 3 && /usr/bin/busybox reboot -f;
