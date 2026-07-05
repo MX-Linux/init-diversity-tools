@@ -17,6 +17,10 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
+#if polkit setuid override doesn't exist, add it
+    if [ -z "$(dpkg-statoverride --list /usr/lib/polkit-1/polkit-agent-helper-1 2>/dev/null)" ]; then
+        dpkg-statoverride --update --add root root 4755 /usr/lib/polkit-1/polkit-agent-helper-1
+    fi
 
 case "$1" in
     configure)

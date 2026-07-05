@@ -2,7 +2,7 @@
 
 #DEBHELPER#
 
-# postrm script for grub-init-diversity
+# postrm script for init-diversity-tools
 
 set -e
 
@@ -33,6 +33,13 @@ case "$1" in
         dpkg-divert --quiet --package init-diversity-tools --rename \
                     --divert /usr/share/init-diversity-tools/diversions$G --remove $G || :
     done
+
+
+#if polkit setuid override exists, remove it & restore default permissions
+if [ -n "$(dpkg-statoverride --list /usr/lib/polkit-1/polkit-agent-helper-1 2>/dev/null)" ]; then
+        dpkg-statoverride --remove /usr/lib/polkit-1/polkit-agent-helper-1
+        chmod u-s /usr/lib/polkit-1/polkit-agent-helper-1
+fi
   ;;
   
   *) :
